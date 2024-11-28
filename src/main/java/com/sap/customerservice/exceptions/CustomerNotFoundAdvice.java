@@ -9,8 +9,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class CustomerNotFoundAdvice {
     @ExceptionHandler(CustomerNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    String employeeNotFoundHandler(CustomerNotFoundException ex) {
+    String customerNotFoundHandler(CustomerNotFoundException ex) {
         return ex.getMessage();
     }
-
 }
